@@ -1,0 +1,201 @@
+.mui-editor {
+	position: relative;
+}
+.mui-editor .mui-editor-toolbar {
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	margin-top: -0.5em;
+	background: red;
+	background: #2c3e50;
+	border-radius: 3px;
+	pointer-events: none;
+	box-shadow: 0em 0.15em 0.25em rgba( 0, 0, 0, 0.15 );
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+.mui-editor.mui-editor-selecting .mui-editor-toolbar,
+.mui-editor.mui-editor-edit-link .mui-editor-toolbar,
+.mui-editor.mui-editor-empty-element .mui-editor-toolbar {
+	opacity: 1;
+	pointer-events: auto;
+	white-space: nowrap;
+	-webkit-transition: opacity ease 160ms, transform ease 160ms;
+	-moz-transition: opacity ease 160ms, transform ease 160ms;
+	-ms-transition: opacity ease 160ms, transform ease 160ms;
+	-o-transition: opacity ease 160ms, transform ease 160ms;
+	transition: opacity ease 160ms, transform ease 160ms;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container:after {
+	position: absolute;
+	z-index: -1;
+	bottom: 0%;
+	left: 50%;
+	margin-left: -0.25em;
+	margin-bottom: -0.25em;
+	display: block;
+	height: 0.5em;
+	width: 0.5em;
+	border: 0.5em solid #2c3e50;
+	border-bottom: 0.5em solid transparent;
+	border-left: 0.5em solid transparent;
+	content: '';
+	-webkit-transform: rotate( 135deg );
+	-moz-transform: rotate( 135deg );
+	-ms-transform: rotate( 135deg );
+	-o-transform: rotate( 135deg );
+	transform: rotate( 135deg );
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container-edit-link {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	pointer-events: none;
+	width: 100%;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container-add-media {
+	display: none;
+}
+.mui-editor.mui-editor-empty-element .mui-editor-toolbar .mui-editor-toolbar-container-buttons {
+	display: none;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container-edit-link input[ type="text" ] {
+	display: block;
+	width: calc( 100% - 2em );
+	height: 3em;
+	line-height: 3em;
+	padding: 0em 1em;
+	color: #ecf0f1;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container-buttons,
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container-edit-link,
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-container-add-media {
+	z-index: 1;
+}
+.mui-editor.mui-editor-edit-link .mui-editor-toolbar .mui-editor-toolbar-container-buttons {
+	z-index: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+.mui-editor.mui-editor-edit-link .mui-editor-toolbar .mui-editor-toolbar-container-edit-link {
+	pointer-events: auto;
+	opacity: 1;
+}
+.mui-editor.mui-editor-empty-element .mui-editor-toolbar .mui-editor-toolbar-container-add-media {
+	display: block;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-button {
+	display: inline-block;
+	float:left;
+	width: 2.4em;
+	height: 3em;
+	line-height: 3em;
+	vertical-align: middle;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-button svg {
+	display: block;
+	fill: #ecf0f1;
+	margin: auto;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-button.mui-editor-toolbar-button-active svg {
+	fill: #1abc9c;
+}
+.mui-editor .mui-editor-toolbar .mui-editor-toolbar-button.mui-editor-toolbar-button-hide {
+	display: none;
+}
+.mui-editor .mui-editor-content {
+	position: relative;
+	line-height: 1.8;
+	outline: none;
+}
+.mui-editor .mui-editor-content p {
+	margin: 0em 0em 2em 0em;
+}
+.mui-editor .mui-editor-content pre {
+	font-family: monospace;
+	font-size: 1.1em;
+	padding: 1.2em 1.6em;
+	margin-bottom: 1.6em;
+	background-color: #ecf0f1;
+	border-radius: 3px;
+}
+.mui-editor .mui-editor-content pre * {
+	font-family: monospace;
+}
+.mui-editor .mui-editor-content code {
+	padding: 0.2em 0.4em;
+	font-family: monospace;
+	font-size: 1.1em;
+	background-color: #ecf0f1;
+	border-radius: 3px;
+}
+.mui-editor .mui-editor-content code * {
+	font-family: monospace;
+}
+.mui-editor .mui-editor-content ul,
+.mui-editor .mui-editor-content ol {
+	margin-left: 1.6em;
+	margin-bottom: 1.6em;
+}
+.mui-editor .mui-editor-content ul ul,
+.mui-editor .mui-editor-content ul ol,
+.mui-editor .mui-editor-content ol ul,
+.mui-editor .mui-editor-content ol ol {
+	margin-bottom: 0em;
+}
+.mui-editor .mui-editor-content h1 {
+	margin: 0em;
+	font-size: 2.2em;
+}
+.mui-editor .mui-editor-content h2 {
+	margin: 0em;
+	font-size: 1.8em;
+}
+.mui-editor .mui-editor-content h3 {
+	margin: 0em;
+	font-size: 1.4em;
+}
+.mui-editor .mui-editor-content h4 {
+	margin: 0em;
+	font-size: 1em;
+}
+.mui-editor .mui-editor-content h5 {
+	margin: 0em;
+	font-size: 0.9em;
+}
+.mui-editor .mui-editor-content h6 {
+	margin: 0em;
+	font-size: 0.7em;
+}
+.mui-editor .mui-editor-content .mui-editor-content-media {
+	max-width: 100%;
+	text-align: center;
+}
+.mui-editor .mui-editor-content .mui-editor-content-media img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+.mui-editor .mui-editor-content .mui-editor-content-media.mui-editor-content-media-align-left {
+	float: left;
+	max-width: 50%;
+	padding-right: 0.8em;
+	margin-right: 0.8em;
+}
+.mui-editor .mui-editor-content .mui-editor-content-media.mui-editor-content-media-align-right {
+	float: right;
+	max-width: 50%;
+	padding-left: 0.8em;
+	margin-left: 0.8em;
+}
