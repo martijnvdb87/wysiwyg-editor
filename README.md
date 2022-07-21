@@ -2,7 +2,7 @@
 A simple jQuery WYSIWYG editor based on the [Medium.com](https://medium.com) editor.
 
 **Try it out:**
-http://martijnvdb.com/demo/wysiwyg-editor/
+[http://martijnvdb.com/demo/wysiwyg-editor/](https://martijnvdb87.github.io/wysiwyg-editor/)
 
 ## Quick install
 Add the stylesheet to the `<head>` tag of your document.
